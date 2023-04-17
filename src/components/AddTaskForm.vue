@@ -31,7 +31,7 @@ export default {
       taskTitle: "",
       selectedCategory: "",
       categories: ["high", "medium", "low"],
-      newTask: {}
+      onNewTask: {}
 
     }
   },
@@ -42,12 +42,12 @@ export default {
     },
     createTask() {
       if (this.taskTitle.length === 0 || this.selectedCategory === '') return;
-      this.newTask = {
+      this.onNewTask = {
         id: Date.now(),
         title: this.taskTitle,
         category: this.selectedCategory,
       };
-      this.$emit('newTask', this.newTask);
+      this.$emit('onNewTask', this.onNewTask);
       this.close();
     }
   }
