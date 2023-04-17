@@ -40,7 +40,7 @@
             @mouseover="onMouseOver" @mouseout="onMouseOut"
             @click="open()">
         </button>
-        <AddTaskForm v-if="isModalOpened" @closeEvent="close" @newTask="getNewTask"/>
+        <AddTaskForm v-if="isModalOpened" @closeEvent="close" @onNewTask="getNewTask"/>
       </div>
     </div>
 
