@@ -41,7 +41,7 @@ export default {
       console.log('AddTask |Form page');
     },
     createTask() {
-      if (this.taskTitle === 0 || this.selectedCategory === '') return;
+      if (this.taskTitle.length === 0 || this.selectedCategory === '') return;
       this.newTask = {
         id: Date.now(),
         title: this.taskTitle,
